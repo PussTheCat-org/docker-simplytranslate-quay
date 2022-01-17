@@ -1,6 +1,6 @@
 # simplytranslate-quay
 
-A simplytranslate image, on Quay.
+A [simplytranslate](https://sr.ht/~metalune/SimplyTranslate/) image, on Quay.
 
 https://quay.io/repository/pussthecatorg/simplytranslate
 
