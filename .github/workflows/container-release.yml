@@ -26,15 +26,11 @@ jobs:
         username: ${{ secrets.QUAY_USERNAME }}
         password: ${{ secrets.QUAY_PASSWORD }}
 
-    - name: Set up Docker Buildx
-      id: buildx
-      uses: docker/setup-buildx-action@v1
-
     - name: Build and push Docker AMD64 image for Push Event
       uses: docker/build-push-action@v2
       with:
-        context: ./
-        file: ./Dockerfile
+        context: .
+        file: docker/Dockerfile
         platforms: linux/amd64
         labels: quay.expires-after=24w
         push: true
