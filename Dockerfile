@@ -9,7 +9,7 @@ WORKDIR /engines
 RUN python3 setup.py install && \
     pip install -r requirements.txt
 WORKDIR /web
-RUN pip install -r requirements.txt && \
+RUN pip install -r requirements.txt
 
 EXPOSE 5000
 CMD ["python3", "main.py"]
