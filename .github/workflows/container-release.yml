@@ -27,13 +27,12 @@ jobs:
         password: ${{ secrets.QUAY_PASSWORD }}
 
     - name: Build and push Docker AMD64 image for Push Event
-      if: github.ref == 'refs/heads/master'
       uses: docker/build-push-action@v2
       with:
-        context: .
+        context: ./
         file: ./Dockerfile
         platforms: linux/amd64
         labels: quay.expires-after=24w
         push: true
-        tags: quay.io/pussthecatorg/simplytranslate:${{ env.commitid }},quay.io/pussthecatorg/simplytranslate:latest
+        tags: quay.io/pussthecatorg/simplytranslate:${{ env.commitid }}, quay.io/pussthecatorg/simplytranslate:latest
         build-args: release=1
