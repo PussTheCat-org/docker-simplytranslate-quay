@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  simplytranslate:
+    image: quay.io/pussthecatorg/simplytranslate:latest
+    container_name: simplytranslate
+    ports:
+      - "127.0.0.1:5000:5000" # Replace with "5000:5000" if you don't use a reverse proxy
+    volumes:
+      - "./config.conf:/etc/simplytranslate/web.conf" 
