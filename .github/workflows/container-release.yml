@@ -38,5 +38,5 @@ jobs:
         platforms: linux/amd64
         labels: quay.expires-after=24w
         push: true
-        tags: quay.io/pussthecatorg/simplytranslate:${{ env.commitid }}, quay.io/pussthecatorg/simplytranslate:latest
+        tags: quay.io/pussthecatorg/simplytranslate:latest
         build-args: release=1
