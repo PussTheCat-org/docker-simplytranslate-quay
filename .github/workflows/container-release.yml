@@ -1,0 +1,35 @@
+name: Docker Image CI
+
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * *'
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check Out Repo
+      uses: actions/checkout@v2
+
+    - name: Login to registry
+      uses: docker/login-action@v1
+      with:
+        registry: quay.io
+        username: ${{ secrets.QUAY_USERNAME }}
+        password: ${{ secrets.QUAY_PASSWORD }}
+
+    - name: Build and push Docker AMD64 image for Push Event
+      if: github.ref == 'refs/heads/master'
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: ./Dockerfile
+        platforms: linux/amd64
+        labels: quay.expires-after=24w
+        push: true
+        tags: quay.io/pussthecatorg/simplytranslate:${{ env.commitid }},quay.io/pussthecatorg/simplytranslate:latest
+        build-args: release=1
