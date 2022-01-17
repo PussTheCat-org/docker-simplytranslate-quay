@@ -4,7 +4,7 @@ A simplytranslate image, on Quay.
 
 https://quay.io/repository/pussthecatorg/simplytranslate
 
-This image mostly exist for the [PussTheCat.org](https://pussthecat;org) [instance](https://simplytranslate.pussthecat.org/), but others are free to use it.
+This image mostly exist for the [PussTheCat.org](https://pussthecat.org/) [instance](https://simplytranslate.pussthecat.org/), but others are free to use it.
 
 ## Usage:
 
