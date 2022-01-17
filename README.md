@@ -13,3 +13,8 @@ This image mostly exist for the [PussTheCat.org](https://pussthecat;org) [instan
 - Customize the `config.conf` file how you want
 - Move both files to the folder you want
 - `docker-compose up -d`
+
+## Credit:
+
+- The Invidious `container-release.yml` file: https://github.com/iv-org/invidious/blob/master/.github/workflows/container-release.yml
+- [@unixfox](https://github.com/unixfox), invidious-custom `docker-image.yml` file: https://github.com/unixfox/invidious-custom/blob/master/.github/workflows/docker-image.yml
