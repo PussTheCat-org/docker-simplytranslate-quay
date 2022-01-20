@@ -1,6 +1,6 @@
 FROM python:3-slim
 
-RUN apt update && apt upgrade && apt install -y git automake libtool g++-multilib zlib1g-dev  build-essential gcc g++ libxml2 libxml2-dev libxslt1.1 libxslt1-dev
+RUN apt update && apt upgrade && apt install -y git automake libtool g++-multilib-i686-linux-gnu zlib1g-dev  build-essential gcc g++ libxml2 libxml2-dev libxslt1.1 libxslt1-dev
 
 RUN git clone https://git.sr.ht/~metalune/simplytranslate_engines engines && \
     git clone https://git.sr.ht/~metalune/simplytranslate_web web
