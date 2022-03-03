@@ -15,7 +15,7 @@ RUN apk upgrade --no-cache && \
       libxslt-dev && \
     git clone --depth=1 https://git.sr.ht/~metalune/simplytranslate_engines engines && \
     git clone --depth=1 https://git.sr.ht/~metalune/simplytranslate_web web && \
-    cd  /simplytranslate/engines && \
+    cd /simplytranslate/engines && \
     python3 setup.py install && \
     pip3 install --upgrade pip wheel setuptools && \
     pip3 install --no-cache -r requirements.txt && \
