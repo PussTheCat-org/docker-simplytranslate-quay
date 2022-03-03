@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 WORKDIR /simplytranslate	
-RUN apk upgrade --no-cache \ &&
+RUN apk upgrade --no-cache && \ 
     apk add --no-cache -t build-dependencies \
       build-base \
       git \
