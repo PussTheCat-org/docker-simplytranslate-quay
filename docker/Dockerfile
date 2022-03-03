@@ -5,6 +5,7 @@ RUN apk upgrade --no-cache && \
     apk add --no-cache -t build-dependencies \
       build-base \
       git \
+      python3-dev \
       py3-setuptools \
       libffi-dev \
       libxml2-dev && \
