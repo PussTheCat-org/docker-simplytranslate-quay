@@ -20,7 +20,7 @@ RUN apk upgrade --no-cache && \
     pip3 install --upgrade pip wheel setuptools && \
     pip3 install --no-cache -r requirements.txt && \
     cd /simplytranslate/web && \
-    sed -i 's/^quart$/quart+https:\/\/gitlab.com\/pgjones\/quart.git/' requirements.txt && \
+    sed -i 's/^quart$/git+https:\/\/gitlab.com\/pgjones\/quart.git/' requirements.txt && \
     pip3 install --no-cache -r requirements.txt && \
     rm -rf /root/.cache && \
     apk del --no-cache build-dependencies
