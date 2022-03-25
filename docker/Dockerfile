@@ -16,11 +16,11 @@ RUN apk upgrade --no-cache && \
     git clone --depth=1 https://git.sr.ht/~metalune/simplytranslate_engines engines && \
     git clone --depth=1 https://git.sr.ht/~metalune/simplytranslate_web web && \
     cd /simplytranslate/engines && \
-    sed -i 's/^quart$/quart+https:\/\/gitlab.com\/pgjones\/quart.git/' requirements.txt
     python3 setup.py install && \
     pip3 install --upgrade pip wheel setuptools && \
     pip3 install --no-cache -r requirements.txt && \
     cd /simplytranslate/web && \
+    sed -i 's/^quart$/quart+https:\/\/gitlab.com\/pgjones\/quart.git/' requirements.txt && \
     pip3 install --no-cache -r requirements.txt && \
     rm -rf /root/.cache && \
     apk del --no-cache build-dependencies
