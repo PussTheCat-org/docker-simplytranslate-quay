@@ -13,12 +13,7 @@ RUN apk upgrade --no-cache && \
       python3 \
       py3-pip \
       libxslt-dev && \
-    git clone --depth=1 https://codeberg.org/SimpleWeb/SimplyTranslate-Engines.git engines && \
     git clone --depth=1 https://codeberg.org/SimpleWeb/SimplyTranslate-Web.git web && \
-    cd /simplytranslate/engines && \
-    python3 setup.py install && \
-    pip3 install --upgrade pip wheel setuptools && \
-    pip3 install --no-cache -r requirements.txt && \
     cd /simplytranslate/web && \
     pip3 install --no-cache -r requirements.txt && \
     rm -rf /root/.cache && \
