@@ -15,7 +15,7 @@ RUN apk upgrade --no-cache && \
       libxslt-dev && \
     git clone --depth=1 https://codeberg.org/SimpleWeb/SimplyTranslate-Web.git web && \
     cd /simplytranslate/web && \
-    pip3 install --no-cache -r requirements.txt && \
+    pip3 install --break-system-packages --no-cache -r requirements.txt && \
     rm -rf /root/.cache && \
     apk del --no-cache build-dependencies
 
