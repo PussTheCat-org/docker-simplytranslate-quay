@@ -1,8 +1,8 @@
-# simplytranslate-quay
+# docker-simplytranslate-quay
 
 A [SimplyTranslate](https://codeberg.org/SimpleWeb/SimplyTranslate-Web) image, on Quay.
 
-[Quay page](https://quay.io/repository/pussthecatorg/simplytranslate) | [GitHub page](https://github.com/PussTheCat-org/simplytranslate-quay)
+[Quay page](https://quay.io/repository/pussthecatorg/simplytranslate) | [GitHub page](https://github.com/PussTheCat-org/docker-simplytranslate-quay)
 
 This image mostly exist for the [PussTheCat.org](https://pussthecat.org/) [instance](https://simplytranslate.pussthecat.org/), but others are free to use it.
 
